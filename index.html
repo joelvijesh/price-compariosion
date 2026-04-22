@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceMatch - Find the Best Deals on Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-bolt"></i> PriceMatch
+            </a>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for mobiles, laptops, headphones...">
+                <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="nav-links">
+                <a href="#categories">Categories</a>
+                <a href="#deals">Top Deals</a>
+                <a href="#" class="btn-primary">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Never Overpay for Tech Again.</h1>
+                <p>Compare prices across Amazon, Flipkart, Croma, and more instantly. Find the best deal in seconds.</p>
+                <div class="hero-cta">
+                    <button class="btn-gradient" onclick="document.getElementById('searchInput').focus()">Start Searching</button>
+                    <button class="btn-outline">Browse Categories</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <img src="https://m.media-amazon.com/images/I/71f5Eu5lJ4L._SX679_.jpg" alt="Laptop">
+                    <div class="card-info">
+                        <span>MacBook Air M2</span>
+                        <div class="price-pill amazon">Amazon: ₹1,24,900</div>
+                        <div class="price-pill best">Best: ₹1,21,990</div>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <img src="https://m.media-amazon.com/images/I/81dpZOsIRxL._SX679_.jpg" alt="Phone">
+                    <div class="card-info">
+                        <span>iPhone 15 Pro</span>
+                        <div class="price-pill flipkart">Flipkart: ₹1,20,990</div>
+                        <div class="price-pill best">Best: ₹1,18,990</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="categories" class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Explore Categories</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="mobile">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3>Mobiles</h3>
+                </div>
+                <div class="category-card" data-category="laptop">
+                    <i class="fa-solid fa-laptop"></i>
+                    <h3>Laptops</h3>
+                </div>
+                <div class="category-card" data-category="camera">
+                    <i class="fa-solid fa-camera"></i>
+                    <h3>Cameras</h3>
+                </div>
+                <div class="category-card" data-category="headphones">
+                    <i class="fa-solid fa-headphones"></i>
+                    <h3>Headphones</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="deals" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="resultsTitle">Trending Deals</h2>
+                <div class="filter-sort">
+                    <select id="sortSelect">
+                        <option value="relevance">Sort by: Relevance</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="discount">Biggest Discount</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be injected here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo"><i class="fa-solid fa-bolt"></i> PriceMatch</a>
+                <p>Your ultimate destination for finding the best prices on electronics and gadgets across multiple retailers.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Retailers</h4>
+                    <a href="#">Amazon</a>
+                    <a href="#">Flipkart</a>
+                    <a href="#">Croma</a>
+                    <a href="#">Reliance Digital</a>
+                </div>
+                <div class="link-group">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PriceMatch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
